@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MvcBall.Models
 {
-    public class MovieGenreViewModel
+    public class BallColorViewModel
     {
         public List<Ball> Balls { get; set; }
         public SelectList Color { get; set; }

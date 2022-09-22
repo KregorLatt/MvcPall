@@ -23,30 +23,30 @@ namespace MvcPall.Controllers
         public async Task<IActionResult> Index(string BallColor, string searchString)
         {
             // Use LINQ to get list of genres.
-            IQueryable<string> genreQuery = from m in _context.Ball
+            IQueryable<string> colorQuery = from m in _context.Ball
                                             orderby m.Color
                                             select m.Color;
 
-            var movies = from m in _context.Ball
+            var balls = from m in _context.Ball
                          select m;
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(s => s.Name.Contains(searchString));
+                balls = balls.Where(s => s.Name.Contains(searchString));
             }
 
             if (!string.IsNullOrEmpty(BallColor))
             {
-                movies = movies.Where(x => x.Color == BallColor);
+                balls = balls.Where(x => x.Color == BallColor);
             }
 
-            var movieGenreVM = new MovieGenreViewModel
+            var ballColorVM = new BallColorViewModel
             {
-                Color = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Balls = await movies.ToListAsync()
+                Color = new SelectList(await colorQuery.Distinct().ToListAsync()),
+                Balls = await balls.ToListAsync()
             };
 
-            return View(movieGenreVM);
+            return View(ballColorVM);
         }
 
         // GET: Balls/Details/5
