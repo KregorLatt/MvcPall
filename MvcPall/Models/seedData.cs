@@ -25,6 +25,7 @@ namespace MvcBall.Models
                     {
                         Name = "Võrkpall",
                         Color = "Kollane",
+                        Players = "Lapsed",
                         Size = 4
                     },
 
@@ -32,6 +33,7 @@ namespace MvcBall.Models
                     {
                         Name = "Jalgpall",
                         Color = "Valge",
+                        Players = "Täiskasvanud",
                         Size = 5
                     },
 
@@ -39,6 +41,7 @@ namespace MvcBall.Models
                     {
                         Name = "Käsipall",
                         Color = "Sinine",
+                        Players = "Lapsed",
                         Size = 2
                     },
 
@@ -46,6 +49,7 @@ namespace MvcBall.Models
                     {
                         Name = "Korvpall",
                         Color = "Pruun",
+                        Players = "Vanurid",
                         Size = 4
                     }
                 );

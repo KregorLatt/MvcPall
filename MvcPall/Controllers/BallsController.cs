@@ -78,7 +78,7 @@ namespace MvcPall.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,color,Name,size")] Ball ball)
+        public async Task<IActionResult> Create([Bind("Id,color,Name,size,players")] Ball ball)
         {
             if (ModelState.IsValid)
             {

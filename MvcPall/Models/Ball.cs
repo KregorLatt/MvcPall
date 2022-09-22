@@ -12,5 +12,7 @@ namespace MvcBall.Models
         
         public string Name { get; set; }
         public int Size { get; set; }
+        public string Players { get; set; }
+
     }
 }
