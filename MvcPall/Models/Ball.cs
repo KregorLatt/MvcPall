@@ -6,11 +6,11 @@ namespace MvcBall.Models
     public class Ball
     {
         public int Id { get; set; }
-        public string color { get; set; }
+        public string Color { get; set; }
 
         
         
         public string Name { get; set; }
-        public int size { get; set; }
+        public int Size { get; set; }
     }
 }
