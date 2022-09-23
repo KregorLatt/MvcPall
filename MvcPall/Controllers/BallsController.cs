@@ -78,7 +78,7 @@ namespace MvcPall.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,color,Name,size,players")] Ball ball)
+        public async Task<IActionResult> Create([Bind("Id,Color,Name,Size,Players")] Ball ball)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +110,7 @@ namespace MvcPall.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,color,Name,size")] Ball ball)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Color,Name,Size,Players")] Ball ball)
         {
             if (id != ball.Id)
             {

@@ -13,14 +13,15 @@ namespace MvcBall.Models
         public string Color { get; set; }
         
 
-        [Range(1, 100)]
+        
+        [StringLength(30)]
         [Required]
         public string Name { get; set; }
         
 
         
         [Required]
-        [StringLength(30)]
+        [Range(1, 100)]
         public int Size { get; set; }
         
 
